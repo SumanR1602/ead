@@ -1,0 +1,37 @@
+1. Open cmd and type mongod
+2. Open other cmd and type mongosh
+
+In mongosh shell:
+use sampledb
+
+db.mycollection.insertOne({ name: "Alice", age: 25, city: "New York" })
+db.mycollection.insertMany([
+  { name: "Bob", age: 30, city: "Los Angeles" },
+  { name: "Charlie", age: 28, city: "Chicago" },
+  { name: "Diana", age: 22, city: "Houston" }
+])
+
+
+
+db.mycollection.find()
+db.mycollection.findOne({ name: "Alice" })
+db.mycollection.find({ age: { $gte: 25 } }) //greater than or equal to 25
+
+
+db.mycollection.updateOne(
+  { name: "Alice" }, 
+  { $set: { age: 26, city: "Boston" } }
+)
+db.mycollection.updateMany(
+  { age: { $gte: 25 } },
+  { $set: { status: "Active" } }
+)
+db.mycollection.replaceOne(
+  { name: "Charlie" },
+  { name: "Charles", age: 29, city: "Seattle" }
+)
+
+
+db.mycollection.deleteOne({ name: "Diana" })
+db.mycollection.deleteMany({ age: { $gte: 30 } })
+

@@ -1,0 +1,9 @@
+1. Visit the MongoDB download page(https://www.mongodb.com/try/download/community) 
+
+2. Download the Community server edition of MongoDB for your operating system.
+
+3. Now we go to location where MongoDB installed in step-5 in our system and copy the binpath: 
+
+4. Now, to create an environment variable open system properties << Environment Variable -> System variable << path << Edit Environment variable and paste the copied link to your environment system and click Ok
+
+5. Open a terminal or command prompt and start the MongoDB server with the following command: mongosh 

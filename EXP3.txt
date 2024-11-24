@@ -1,0 +1,6 @@
+Install Node.js: https://nodejs.org/en
+Open a terminal create a new React app using Create React App:
+-> npx create-react-app my-app
+-> cd my-app
+->  npm start
+Go to http://localhost:3000 in browser
